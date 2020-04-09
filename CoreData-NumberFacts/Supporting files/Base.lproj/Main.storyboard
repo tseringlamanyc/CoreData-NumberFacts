@@ -10,7 +10,7 @@
         <!--Users-->
         <scene sceneID="dH3-HW-HE8">
             <objects>
-                <viewController id="9PH-nW-Kmp" sceneMemberID="viewController">
+                <viewController id="9PH-nW-Kmp" customClass="UserVC" customModule="CoreData_NumberFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQj-Uy-rty">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,15 +46,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="kGJ-YS-eXM" id="ibQ-zh-Zep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeR-7m-jUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1440.5797101449277" y="464.73214285714283"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Create UserVC-->
         <scene sceneID="4mn-el-Rr2">
             <objects>
-                <tableViewController id="1nI-i4-TEC" sceneMemberID="viewController">
+                <tableViewController id="1nI-i4-TEC" customClass="CreateUserVC" customModule="CoreData_NumberFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="1PD-AK-eMo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +95,9 @@
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="9i3-9a-oSE">
                                                     <rect key="frame" x="0.0" y="42" width="414" height="216"/>
+                                                    <connections>
+                                                        <action selector="dateChanged:" destination="1nI-i4-TEC" eventType="valueChanged" id="fsV-5o-IGl"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -112,6 +118,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-Z8-K3G">
                                                     <rect key="frame" x="182.5" y="7" width="49" height="30"/>
                                                     <state key="normal" title="Submit"/>
+                                                    <connections>
+                                                        <action selector="submitPressed:" destination="1nI-i4-TEC" eventType="touchUpInside" id="ekX-Be-89K"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -128,6 +137,9 @@
                             <outlet property="delegate" destination="1nI-i4-TEC" id="LkB-Cv-bOK"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="userTF" destination="VAV-Lf-1Fp" id="WTe-YR-7vO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdC-41-iSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +148,7 @@
         <!--Post-->
         <scene sceneID="EmW-Px-vcS">
             <objects>
-                <viewController id="ew9-7P-0KD" customClass="ViewController" customModule="CoreData_NumberFacts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ew9-7P-0KD" customClass="PostVC" customModule="CoreData_NumberFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7EU-eI-j7K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,15 +200,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="5un-6d-VUG" id="MF2-i4-wnF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNx-Nz-dL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1440.5797101449277" y="-204.91071428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Create PostVC-->
         <scene sceneID="IwC-eN-F0d">
             <objects>
-                <tableViewController id="0ze-q2-8mR" sceneMemberID="viewController">
+                <tableViewController id="0ze-q2-8mR" customClass="CreatePostVC" customModule="CoreData_NumberFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mTi-fA-i2k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,6 +290,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC4-v9-dEK">
                                                     <rect key="frame" x="182.5" y="7" width="49" height="30"/>
                                                     <state key="normal" title="Submit"/>
+                                                    <connections>
+                                                        <action selector="submitPressed:" destination="0ze-q2-8mR" eventType="touchUpInside" id="1vO-T6-4te"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -291,6 +309,11 @@
                             <outlet property="delegate" destination="0ze-q2-8mR" id="x2E-4F-hcr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="numberFactTF" destination="kla-5k-4Jr" id="uPo-ih-YPe"/>
+                        <outlet property="pickerView" destination="ZWh-C4-4h1" id="dA5-uf-16n"/>
+                        <outlet property="postTitleTF" destination="fJx-EJ-Kdh" id="ynX-4T-POg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVJ-MV-Hou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

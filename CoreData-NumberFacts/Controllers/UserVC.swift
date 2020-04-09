@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserVC.swift
 //  CoreData-NumberFacts
 //
 //  Created by Tsering Lama on 4/8/20.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PostVC: UIViewController {
-
+class UserVC: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,6 +17,4 @@ class PostVC: UIViewController {
 
     }
 
-
 }
-
