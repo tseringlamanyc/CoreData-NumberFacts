@@ -143,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="2315.9420289855075" y="464.73214285714283"/>
         </scene>
-        <!--Post-->
+        <!--Posts-->
         <scene sceneID="EmW-Px-vcS">
             <objects>
                 <viewController id="ew9-7P-0KD" customClass="PostVC" customModule="CoreData_NumberFacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,7 +191,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qey-H2-Obx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Post" id="zmG-dg-h8d">
+                    <navigationItem key="navigationItem" title="Posts" id="zmG-dg-h8d">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lq9-H2-UMd">
                             <connections>
                                 <segue destination="0ze-q2-8mR" kind="presentation" id="7yL-vg-aL7"/>
@@ -335,11 +335,11 @@
             </objects>
             <point key="canvasLocation" x="-392" y="141"/>
         </scene>
-        <!--Item 1-->
+        <!--Posts-->
         <scene sceneID="N0f-Nn-SAs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pqm-9k-jkA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="gJ2-lr-Poz"/>
+                    <tabBarItem key="tabBarItem" title="Posts" image="book.circle" catalog="system" id="gJ2-lr-Poz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0A-iy-jMG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -354,11 +354,11 @@
             </objects>
             <point key="canvasLocation" x="528.98550724637687" y="-205.58035714285714"/>
         </scene>
-        <!--Item 2-->
+        <!--Users-->
         <scene sceneID="tx2-mX-toM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ieK-PO-VLN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="EbY-pQ-feu"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="person.3.fill" catalog="system" id="EbY-pQ-feu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BZE-at-RyY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -375,6 +375,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>

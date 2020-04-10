@@ -34,12 +34,12 @@ class CoreDataManager {
         do {
             try context.save()  // NSMangedObjectContext
         } catch {
-            print("error saving user: \(error)")
+            print("Error saving user: \(error)")
         }
         return user
     }
     
-    public func fetchUser() -> [User] {
+    public func fetchUsers() -> [User] {
         do {
             users = try context.fetch(User.fetchRequest())  // fetchRequest gets all the objects from coredata (NSFetchRequest) 
             // NSPredicate to filter core data objects during fetching
@@ -49,4 +49,28 @@ class CoreDataManager {
         return users
     }
     
+    public func createPost(user: User, numberFact: Double, title: String) -> Post {
+        let post = Post(entity: Post.entity(), insertInto: context)
+        post.number = numberFact
+        post.title = title
+        
+        // create relationship between post and user
+        post.user = user
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving post: \(post)")
+        }
+        return post
+    }
+    
+    public func fetchPosts() -> [Post] {
+        do {
+            posts = try context.fetch(Post.fetchRequest())
+        } catch {
+            print("Error fetching post: \(error)")
+        }
+        return posts
+    }
 }

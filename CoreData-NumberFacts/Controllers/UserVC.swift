@@ -30,7 +30,7 @@ class UserVC: UIViewController {
     }
     
     private func loadUsers() {
-        users = CoreDataManager.shared.fetchUser()
+        users = CoreDataManager.shared.fetchUsers()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
