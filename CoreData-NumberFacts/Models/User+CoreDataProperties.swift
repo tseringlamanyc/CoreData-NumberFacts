@@ -19,6 +19,7 @@ extension User {
 
     @NSManaged public var dob: Date?
     @NSManaged public var name: String?
+    @NSManaged public var twitter: String?
     @NSManaged public var posts: NSSet?
 
 }

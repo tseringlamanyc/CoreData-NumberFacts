@@ -18,9 +18,10 @@
 		52B6D747243EB54A00522F9B /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6D746243EB54A00522F9B /* CreateUserVC.swift */; };
 		52B6D749243EB55700522F9B /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6D748243EB55700522F9B /* UserVC.swift */; };
 		52EFF3B82440215C002CF191 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3B42440215C002CF191 /* User+CoreDataClass.swift */; };
-		52EFF3B92440215C002CF191 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3B52440215C002CF191 /* User+CoreDataProperties.swift */; };
 		52EFF3BA2440215C002CF191 /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3B62440215C002CF191 /* Post+CoreDataClass.swift */; };
-		52EFF3BB2440215C002CF191 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3B72440215C002CF191 /* Post+CoreDataProperties.swift */; };
+		52EFF3C6244022E9002CF191 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3C4244022E9002CF191 /* User+CoreDataProperties.swift */; };
+		52EFF3C7244022E9002CF191 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3C5244022E9002CF191 /* Post+CoreDataProperties.swift */; };
+		52EFF3C9244024A9002CF191 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFF3C8244024A9002CF191 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,10 @@
 		52B6D746243EB54A00522F9B /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
 		52B6D748243EB55700522F9B /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		52EFF3B42440215C002CF191 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		52EFF3B52440215C002CF191 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52EFF3B62440215C002CF191 /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
-		52EFF3B72440215C002CF191 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52EFF3C4244022E9002CF191 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52EFF3C5244022E9002CF191 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52EFF3C8244024A9002CF191 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				52EFF3B42440215C002CF191 /* User+CoreDataClass.swift */,
-				52EFF3B52440215C002CF191 /* User+CoreDataProperties.swift */,
+				52EFF3C4244022E9002CF191 /* User+CoreDataProperties.swift */,
+				52EFF3C5244022E9002CF191 /* Post+CoreDataProperties.swift */,
 				52EFF3B62440215C002CF191 /* Post+CoreDataClass.swift */,
-				52EFF3B72440215C002CF191 /* Post+CoreDataProperties.swift */,
 				524B702B243EAA5200D023C4 /* CoreData_NumberFacts.xcdatamodeld */,
+				52EFF3C8244024A9002CF191 /* CoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,11 +195,12 @@
 				524B7023243EAA5200D023C4 /* AppDelegate.swift in Sources */,
 				524B7025243EAA5200D023C4 /* SceneDelegate.swift in Sources */,
 				524B702D243EAA5200D023C4 /* CoreData_NumberFacts.xcdatamodeld in Sources */,
+				52EFF3C9244024A9002CF191 /* CoreDataManager.swift in Sources */,
 				52EFF3B82440215C002CF191 /* User+CoreDataClass.swift in Sources */,
-				52EFF3BB2440215C002CF191 /* Post+CoreDataProperties.swift in Sources */,
+				52EFF3C7244022E9002CF191 /* Post+CoreDataProperties.swift in Sources */,
 				52EFF3BA2440215C002CF191 /* Post+CoreDataClass.swift in Sources */,
+				52EFF3C6244022E9002CF191 /* User+CoreDataProperties.swift in Sources */,
 				52B6D749243EB55700522F9B /* UserVC.swift in Sources */,
-				52EFF3B92440215C002CF191 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

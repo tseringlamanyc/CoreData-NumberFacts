@@ -10,7 +10,6 @@
 import Foundation
 import CoreData
 
-
 extension Post {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Post> {
@@ -19,6 +18,7 @@ extension Post {
 
     @NSManaged public var number: Double
     @NSManaged public var title: String?
+    @NSManaged public var location: String?
     @NSManaged public var user: User?
 
 }
