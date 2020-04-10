@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CreatePostDelegate: AnyObject {
+    func didCreatePost(createPostVC: CreatePostVC, post: Post)
+}
+
 class CreatePostVC: UITableViewController {
     
     @IBOutlet weak var postTitleTF: UITextField!
@@ -16,10 +20,15 @@ class CreatePostVC: UITableViewController {
     
     private var users = [User]()
     
+    private var selectedUser: User?
+    
+    weak var delegate: CreatePostDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePickerView()
         loadUsers()
+        selectedUser = users.first
     }
     
     private func configurePickerView() {
@@ -32,7 +41,15 @@ class CreatePostVC: UITableViewController {
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
+        guard let postTitle = postTitleTF.text, !postTitle.isEmpty, let numberFact = numberFactTF.text, !numberFact.isEmpty, let numberFactAsDouble = Double(numberFact), let user = selectedUser else {
+            print("Enter title, numberfact and a user")
+            return
+        }
         
+        // creating a post
+        let post = CoreDataManager.shared.createPost(user: user, numberFact: numberFactAsDouble, title: postTitle)
+        delegate?.didCreatePost(createPostVC: self, post: post)
+        dismiss(animated: true)
     }
 }
 
@@ -51,6 +68,6 @@ extension CreatePostVC: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        selectedUser = users[row]
     }
 }

@@ -73,4 +73,14 @@ class CoreDataManager {
         }
         return posts
     }
+    
+    public func deletePost(post: Post) {
+        context.delete(post)
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed to delete post: \(error)")
+        }
+    }
 }
