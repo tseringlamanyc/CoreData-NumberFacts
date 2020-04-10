@@ -8,20 +8,37 @@
 
 import UIKit
 
+protocol CreateUserVCDelegate: AnyObject {
+    func didCreateUser(createUserVC: CreateUserVC, user: User)
+}
+
 class CreateUserVC: UITableViewController {
     
     @IBOutlet weak var userTF: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
+    weak var delegate: CreateUserVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func dateChanged(_ sender: UIDatePicker) {
         
+        datePicker.maximumDate = Date() // todays date
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
         
+        guard let userName = userTF.text, !userName.isEmpty else {
+            print("Missing username")
+            return
+        }
+        
+        let date = datePicker.date
+        
+        // create a user
+        let user = CoreDataManager.shared.createUser(name: userName, dob: date)
+        
+        // set delegate
+        delegate?.didCreateUser(createUserVC: self, user: user)
+        dismiss(animated: true)
     }
 }

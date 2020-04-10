@@ -41,12 +41,12 @@ class CoreDataManager {
     
     public func fetchUser() -> [User] {
         do {
-            users = try context.fetch(User.fetchRequest())  // fetchRequest gets all the objects from coredata
+            users = try context.fetch(User.fetchRequest())  // fetchRequest gets all the objects from coredata (NSFetchRequest) 
             // NSPredicate to filter core data objects during fetching
         } catch {
             print("Error fetching users: \(error)")
         }
-        return users 
+        return users
     }
     
 }

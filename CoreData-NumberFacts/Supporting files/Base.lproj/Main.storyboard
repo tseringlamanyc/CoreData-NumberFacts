@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Users" id="EHE-Wq-o2J">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="M3Z-km-Sc5">
                             <connections>
-                                <segue destination="1nI-i4-TEC" kind="presentation" id="FJb-Wp-Y8f"/>
+                                <segue destination="1nI-i4-TEC" kind="presentation" identifier="createUserSegue" id="FJb-Wp-Y8f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -95,9 +95,6 @@
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="9i3-9a-oSE">
                                                     <rect key="frame" x="0.0" y="42" width="414" height="216"/>
-                                                    <connections>
-                                                        <action selector="dateChanged:" destination="1nI-i4-TEC" eventType="valueChanged" id="fsV-5o-IGl"/>
-                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -138,6 +135,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="datePicker" destination="9i3-9a-oSE" id="Mxt-f3-aeo"/>
                         <outlet property="userTF" destination="VAV-Lf-1Fp" id="WTe-YR-7vO"/>
                     </connections>
                 </tableViewController>
@@ -201,7 +199,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="5un-6d-VUG" id="MF2-i4-wnF"/>
+                        <outlet property="tableView" destination="5un-6d-VUG" id="Sxj-EQ-GoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNx-Nz-dL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
